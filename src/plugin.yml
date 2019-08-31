@@ -1,0 +1,5 @@
+name: QuestItems
+version: 1.0
+author: RedsTool
+main: org.redstool.questitems.Main
+description: QuestItems plugin
