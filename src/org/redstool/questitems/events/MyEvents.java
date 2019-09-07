@@ -49,9 +49,9 @@ public class MyEvents implements Listener{
 	
 	@EventHandler
 	public void questActionBlock(PlayerInteractEvent e) {
-		if(e.getItem() != null) {
-	        if(e.getItem().getItemMeta() != null) {
-				if(e.getItem().getItemMeta().getLore() != null || !e.getItem().getItemMeta().getLore().isEmpty()) {
+		if(e.hasItem()) {
+	        if(e.getItem().hasItemMeta()) {
+				if(e.getItem().getItemMeta().hasLore()) {
 					for(String s: e.getItem().getItemMeta().getLore()) {
 						if(s.contains(kw)) {
 							e.getPlayer().sendMessage(ChatColor.RED + ud);
